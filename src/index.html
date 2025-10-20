@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Gerenciador de Funcionários</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="app.js" defer></script>
+    </head>
+    <body>
+        <h1>Gerenciador de Funcionários</h1>
+        <h2>Cadastrar Funcionário:</h2>
+        <form id="form-funcionario">
+            <input type="text" id="nome" placeholder="Nome">
+            <input type="number" id="idade" placeholder="Idade">
+            <input type="text" id="cargo" placeholder="Cargo">
+            <input type="number" id="salario" placeholder="Salário" step="0.01">
+            <button type="button" id="cadastrarBtn">Cadastrar</button>
+        </form>
+        
+        <section id="lista-funcionarios">
+            <h2>Lista de Funcionários</h2>
+            <table id="tabela-funcionarios">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Idade</th>
+                            <th>Cargo</th>
+                            <th>Salário</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- linhas serão inseridas dinamicamente -->
+                </tbody>
+            </table>
+        </section>
+
+        <section id="relatorios-container" style="margin-top:1rem">
+            <h3>Relatórios</h3>
+            <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:8px">
+                <button id="btn-media-salario" type="button">Média dos salários</button>
+                <button id="btn-por-cargo" type="button">Quantidade por cargo</button>
+                <button id="btn-salario-5000" type="button">Salário &gt; R$ 5.000,00</button>
+                <button id="btn-limpar-relatorio" type="button">Limpar</button>
+            </div>
+            <div id="relatorios-output" style="background:#f7f7f7;padding:8px;border:1px solid #ddd;border-radius:4px;min-height:48px"></div>
+        </section>
+    </body>
+</html>
